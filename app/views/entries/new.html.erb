@@ -10,8 +10,12 @@
     <input type="text" name="description" id="description">
   </p>
   <p>
+    <label for="posted_on">Posted on</label>
+    <input type="date" name="posted_on" id="posted_on">
+  </p>
+  <p>
     <input type="hidden" name="place_id" id="place_id" value="<%= @place["id"]%>">
-    <input type="hidden" name="posted_on" id="posted_on" value="<%= Date.today%>">
+    <!-- <input type="hidden" name="posted_on" id="posted_on" value="<%= Date.today%>"> -->
   </p>
   <button>Submit</button>
 </form>
