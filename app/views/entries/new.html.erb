@@ -1,0 +1,17 @@
+<h1>New Entry for <%= @place["name"]%></h1>
+
+<form action="/entries" method="post">
+  <p>
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title">
+  </p>
+  <p>
+    <label for="description">Description</label>
+    <input type="text" name="description" id="description">
+  </p>
+  <p>
+    <input type="hidden" name="place_id" id="place_id" value="<%= @place["id"]%>">
+    <input type="hidden" name="posted_on" id="posted_on" value="<%= Date.today%>">
+  </p>
+  <button>Submit</button>
+</form>
